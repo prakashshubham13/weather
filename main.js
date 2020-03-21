@@ -14,6 +14,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&appid=0
   var nameValue = data['name'];
   var descValue = data['weather'][0]['description'];
 
+tempValue = Math.round((tempValue - 273.15));
   main.innerHTML = nameValue;
   desc.innerHTML = "Desc - "+descValue;
   temp.innerHTML = "Temp - "+tempValue;
